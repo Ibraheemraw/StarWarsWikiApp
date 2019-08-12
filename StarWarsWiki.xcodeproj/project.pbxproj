@@ -12,6 +12,14 @@
 		48AF040B2301E2E400E4D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AF04092301E2E400E4D195 /* Main.storyboard */; };
 		48AF040D2301E2E600E4D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48AF040C2301E2E600E4D195 /* Assets.xcassets */; };
 		48AF04102301E2E600E4D195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AF040E2301E2E600E4D195 /* LaunchScreen.storyboard */; };
+		48AF041F2301E8DB00E4D195 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48AF041E2301E8DB00E4D195 /* Starjout.ttf */; };
+		48AF04212301E8F200E4D195 /* bb8_dribbble.gif in Resources */ = {isa = PBXBuildFile; fileRef = 48AF04202301E8F200E4D195 /* bb8_dribbble.gif */; };
+		48AF04232301E92000E4D195 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04222301E92000E4D195 /* UIImage+Gif.swift */; };
+		48AF04252301E96100E4D195 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48AF04242301E96100E4D195 /* ButtonView.xib */; };
+		48AF04272301E9A000E4D195 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04262301E9A000E4D195 /* ButtonView.swift */; };
+		48AF04292301E9E900E4D195 /* FilmListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04282301E9E900E4D195 /* FilmListModel.swift */; };
+		48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042A2301EA0100E4D195 /* PeopleListModel.swift */; };
+		48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042C2301EA1700E4D195 /* PlanetListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		48AF040C2301E2E600E4D195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48AF040F2301E2E600E4D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48AF04112301E2E600E4D195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48AF041E2301E8DB00E4D195 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
+		48AF04202301E8F200E4D195 /* bb8_dribbble.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bb8_dribbble.gif; sourceTree = "<group>"; };
+		48AF04222301E92000E4D195 /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		48AF04242301E96100E4D195 /* ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
+		48AF04262301E9A000E4D195 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		48AF04282301E9E900E4D195 /* FilmListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListModel.swift; sourceTree = "<group>"; };
+		48AF042A2301EA0100E4D195 /* PeopleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListModel.swift; sourceTree = "<group>"; };
+		48AF042C2301EA1700E4D195 /* PlanetListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,78 @@
 		48AF04042301E2E400E4D195 /* StarWarsWiki */ = {
 			isa = PBXGroup;
 			children = (
-				48AF04052301E2E400E4D195 /* AppDelegate.swift */,
-				48AF04072301E2E400E4D195 /* ViewController.swift */,
-				48AF04092301E2E400E4D195 /* Main.storyboard */,
-				48AF040C2301E2E600E4D195 /* Assets.xcassets */,
-				48AF040E2301E2E600E4D195 /* LaunchScreen.storyboard */,
+				48AF041D2301E89A00E4D195 /* Gif */,
+				48AF041C2301E86E00E4D195 /* Extensions */,
+				48AF041B2301E86200E4D195 /* Fonts */,
+				48AF041A2301E85600E4D195 /* Views */,
+				48AF04192301E84400E4D195 /* Models */,
+				48AF04172301E81E00E4D195 /* SupportingFiles */,
+				48AF04182301E83800E4D195 /* Contollers */,
 				48AF04112301E2E600E4D195 /* Info.plist */,
 			);
 			path = StarWarsWiki;
+			sourceTree = "<group>";
+		};
+		48AF04172301E81E00E4D195 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04052301E2E400E4D195 /* AppDelegate.swift */,
+				48AF04092301E2E400E4D195 /* Main.storyboard */,
+				48AF040C2301E2E600E4D195 /* Assets.xcassets */,
+				48AF040E2301E2E600E4D195 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		48AF04182301E83800E4D195 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04072301E2E400E4D195 /* ViewController.swift */,
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
+		48AF04192301E84400E4D195 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04282301E9E900E4D195 /* FilmListModel.swift */,
+				48AF042A2301EA0100E4D195 /* PeopleListModel.swift */,
+				48AF042C2301EA1700E4D195 /* PlanetListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48AF041A2301E85600E4D195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04242301E96100E4D195 /* ButtonView.xib */,
+				48AF04262301E9A000E4D195 /* ButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48AF041B2301E86200E4D195 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				48AF041E2301E8DB00E4D195 /* Starjout.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		48AF041C2301E86E00E4D195 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04222301E92000E4D195 /* UIImage+Gif.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		48AF041D2301E89A00E4D195 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04202301E8F200E4D195 /* bb8_dribbble.gif */,
+			);
+			path = Gif;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +202,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AF041F2301E8DB00E4D195 /* Starjout.ttf in Resources */,
 				48AF04102301E2E600E4D195 /* LaunchScreen.storyboard in Resources */,
+				48AF04252301E96100E4D195 /* ButtonView.xib in Resources */,
 				48AF040D2301E2E600E4D195 /* Assets.xcassets in Resources */,
 				48AF040B2301E2E400E4D195 /* Main.storyboard in Resources */,
+				48AF04212301E8F200E4D195 /* bb8_dribbble.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */,
+				48AF04232301E92000E4D195 /* UIImage+Gif.swift in Sources */,
+				48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */,
 				48AF04082301E2E400E4D195 /* ViewController.swift in Sources */,
+				48AF04272301E9A000E4D195 /* ButtonView.swift in Sources */,
 				48AF04062301E2E400E4D195 /* AppDelegate.swift in Sources */,
+				48AF04292301E9E900E4D195 /* FilmListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
