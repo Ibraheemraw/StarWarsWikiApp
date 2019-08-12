@@ -116,6 +116,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="8IY-Rv-ABa" kind="showDetail" id="qkp-ob-fwv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

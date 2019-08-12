@@ -26,6 +26,7 @@
 		48AF04372301F44E00E4D195 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04362301F44E00E4D195 /* ListController.swift */; };
 		48AF04392301F4A300E4D195 /* OpeningIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04382301F4A300E4D195 /* OpeningIntroController.swift */; };
 		48AF043B2301F74A00E4D195 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF043A2301F74A00E4D195 /* Episodes.swift */; };
+		48AF043D23022B9500E4D195 /* ViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF043C23022B9500E4D195 /* ViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		48AF04362301F44E00E4D195 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		48AF04382301F4A300E4D195 /* OpeningIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningIntroController.swift; sourceTree = "<group>"; };
 		48AF043A2301F74A00E4D195 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
+		48AF043C23022B9500E4D195 /* ViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				48AF04222301E92000E4D195 /* UIImage+Gif.swift */,
+				48AF043C23022B9500E4D195 /* ViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */,
+				48AF043D23022B9500E4D195 /* ViewController+Alerts.swift in Sources */,
 				48AF043B2301F74A00E4D195 /* Episodes.swift in Sources */,
 				48AF04232301E92000E4D195 /* UIImage+Gif.swift in Sources */,
 				48AF04302301F16200E4D195 /* StarWarsApiClient.swift in Sources */,
