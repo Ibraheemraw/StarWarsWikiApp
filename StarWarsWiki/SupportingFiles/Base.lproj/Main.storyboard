@@ -18,14 +18,14 @@
         <!--Home Screen Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeScreenController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreenController" id="BYZ-38-t0r" customClass="HomeScreenController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-8H-aA4" customClass="ButtonView" customModule="StarWarsWiki" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="768" width="414" height="94"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="TFo-ZF-YKv"/>
                                 </constraints>
@@ -79,6 +79,41 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="126.5625"/>
         </scene>
+        <!--Opening Intro Controller-->
+        <scene sceneID="ovm-Ro-gji">
+            <objects>
+                <viewController storyboardIdentifier="OpeningIntroController" id="i80-gp-H0C" customClass="OpeningIntroController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCa-vh-fwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsM-zM-vqv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Twl-bm-0zy" firstAttribute="trailing" secondItem="gsM-zM-vqv" secondAttribute="trailing" id="1u6-1M-a7Y"/>
+                            <constraint firstItem="Twl-bm-0zy" firstAttribute="bottom" secondItem="gsM-zM-vqv" secondAttribute="bottom" id="2uD-0W-fXj"/>
+                            <constraint firstItem="gsM-zM-vqv" firstAttribute="leading" secondItem="Twl-bm-0zy" secondAttribute="leading" id="eaO-Sf-xdZ"/>
+                            <constraint firstItem="gsM-zM-vqv" firstAttribute="top" secondItem="Twl-bm-0zy" secondAttribute="top" id="gqX-uR-vAQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Twl-bm-0zy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPZ-nc-dkv"/>
+                    <connections>
+                        <outlet property="textView" destination="gsM-zM-vqv" id="nJi-be-KIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-pQ-S1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771.0144927536235" y="126.5625"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eXF-Yc-j1k">
             <objects>
@@ -97,6 +132,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zie-b7-NLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-110.14492753623189" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Umo-SR-aRo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YqO-PE-7BC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PMG-N0-ujL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i80-gp-H0C" kind="relationship" relationship="rootViewController" id="dm5-cZ-4dX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADY-4e-Fei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.8695652173915" y="126.5625"/>
         </scene>
     </scenes>
     <resources>

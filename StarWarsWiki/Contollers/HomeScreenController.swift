@@ -1,5 +1,9 @@
 import UIKit
 
+protocol HomeScreenControllerDelegate: AnyObject {
+    func setOpeningIntroText(openingText text: String)
+}
+
 class HomeScreenController: UIViewController {
     // MARK: - Properties & Outlets
     @IBOutlet weak var pickerView: UIPickerView!
@@ -13,18 +17,20 @@ class HomeScreenController: UIViewController {
     }
     private var episodeTitle = String()
     @IBOutlet weak var buttonView: ButtonView!
+    var delegate: HomeScreenControllerDelegate!
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         callMethods()
     }
-    // MARK: - Methods & Actions
+
+
     private func callMethods(){
         callApiClientMethod()
         setupDelegation()
         setDefaultSettingsForVC()
         setButtonTargets()
-        setBttnState()
+        setBttnState(buttonState: false)
     }
 
     private func updateFilmOrder(){
@@ -88,16 +94,27 @@ class HomeScreenController: UIViewController {
     }
 
     @objc private func presentOpeningIntro(){
+        let row = pickerView.selectedRow(inComponent: 0)
+        let text = films[row].openingIntro
+        delegate?.setOpeningIntroText(openingText: text)
+        let storyboardID = "OpeningIntroController"
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let openingIntroController = storyBoard.instantiateViewController(withIdentifier: storyboardID) as? OpeningIntroController else {
+            print("issue with ID")
+            return
+        }
+        self.navigationController?.pushViewController(openingIntroController, animated: true)
     }
+
 
     @objc private func presentPeopleList(){
        showListController()
     }
 
-    private func setBttnState(){
-        buttonView.peopleBttn.isEnabled = false
-        buttonView.readMoreBttn.isEnabled = false
-        buttonView.planetsBttn.isEnabled = false
+    private func setBttnState(buttonState state: Bool){
+        buttonView.peopleBttn.isEnabled = state
+        buttonView.readMoreBttn.isEnabled = state
+        buttonView.planetsBttn.isEnabled = state
     }
 }
 
@@ -116,6 +133,7 @@ extension HomeScreenController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         episodeTitle = "\(films[row].title)"
         setEpisodeTitleImage(episodeName: episodeTitle)
+        setBttnState(buttonState: true)
     }
 }
 
