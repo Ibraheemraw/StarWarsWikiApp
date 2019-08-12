@@ -5,7 +5,6 @@ class ButtonView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var planetsBttn: UIButton!
     @IBOutlet weak var readMoreBttn: UIButton!
-
     @IBOutlet weak var peopleBttn: UIButton!
 
     override init(frame: CGRect) {

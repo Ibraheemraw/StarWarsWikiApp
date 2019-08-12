@@ -70,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qry-z5-POp"/>
                     <connections>
+                        <outlet property="buttonView" destination="cT6-8H-aA4" id="4d7-zA-Tth"/>
                         <outlet property="fileImageView" destination="tan-TF-nxW" id="lMS-Vs-xHz"/>
                         <outlet property="pickerView" destination="0Zi-dh-Its" id="n4C-Vw-U1h"/>
                     </connections>

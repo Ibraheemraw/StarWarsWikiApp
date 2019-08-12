@@ -12,7 +12,7 @@ class HomeScreenController: UIViewController {
         }
     }
     private var episodeTitle = String()
-    private var buttonView = ButtonView()
+    @IBOutlet weak var buttonView: ButtonView!
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,8 @@ class HomeScreenController: UIViewController {
         callApiClientMethod()
         setupDelegation()
         setDefaultSettingsForVC()
+        setButtonTargets()
+        setBttnState()
     }
 
     private func updateFilmOrder(){
@@ -73,10 +75,9 @@ class HomeScreenController: UIViewController {
     }
 
     private func showListController(){
-        
     }
 
-    private func callButtonAactions(){
+    private func setButtonTargets(){
         buttonView.planetsBttn.addTarget(self, action: #selector(presentPlanetList), for: .touchUpInside)
         buttonView.readMoreBttn.addTarget(self, action: #selector(presentOpeningIntro), for: .touchUpInside)
         buttonView.peopleBttn.addTarget(self, action: #selector(presentPeopleList), for: .touchUpInside)
@@ -85,11 +86,18 @@ class HomeScreenController: UIViewController {
     @objc private func presentPlanetList(){
         showListController()
     }
+
     @objc private func presentOpeningIntro(){
-        
     }
+
     @objc private func presentPeopleList(){
        showListController()
+    }
+
+    private func setBttnState(){
+        buttonView.peopleBttn.isEnabled = false
+        buttonView.readMoreBttn.isEnabled = false
+        buttonView.planetsBttn.isEnabled = false
     }
 }
 
