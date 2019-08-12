@@ -12,6 +12,7 @@ class HomeScreenController: UIViewController {
         }
     }
     private var episodeTitle = String()
+    private var buttonView = ButtonView()
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,9 @@ class HomeScreenController: UIViewController {
     }
     // MARK: - Methods & Actions
     private func callMethods(){
-        //callApiClientMethod()
-       // setupDelegation()
-       // setDefaultSettingsForVC()
+        callApiClientMethod()
+        setupDelegation()
+        setDefaultSettingsForVC()
     }
 
     private func updateFilmOrder(){
@@ -69,6 +70,26 @@ class HomeScreenController: UIViewController {
         default:
             fileImageView.image = UIImage(named: "swlogo")
         }
+    }
+
+    private func showListController(){
+        
+    }
+
+    private func callButtonAactions(){
+        buttonView.planetsBttn.addTarget(self, action: #selector(presentPlanetList), for: .touchUpInside)
+        buttonView.readMoreBttn.addTarget(self, action: #selector(presentOpeningIntro), for: .touchUpInside)
+        buttonView.peopleBttn.addTarget(self, action: #selector(presentPeopleList), for: .touchUpInside)
+    }
+
+    @objc private func presentPlanetList(){
+        showListController()
+    }
+    @objc private func presentOpeningIntro(){
+        
+    }
+    @objc private func presentPeopleList(){
+       showListController()
     }
 }
 
