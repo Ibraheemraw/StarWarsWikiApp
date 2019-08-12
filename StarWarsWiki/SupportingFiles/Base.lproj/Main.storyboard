@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1KE-nq-cwQ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home Screen Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-8H-aA4" customClass="ButtonView" customModule="StarWarsWiki" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="768" width="414" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="TFo-ZF-YKv"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zi-dh-Its">
+                                <rect key="frame" x="0.0" y="552" width="414" height="216"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tan-TF-nxW">
+                                <rect key="frame" x="87" y="202" width="240" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="NFa-OZ-L6P"/>
+                                    <constraint firstAttribute="width" constant="240" id="iCx-AM-cgI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Film" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-Qv-zRn">
+                                <rect key="frame" x="20" y="111" width="374" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="fn5-d6-dcj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="tan-TF-nxW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="EBO-yt-yYS"/>
+                            <constraint firstItem="cT6-8H-aA4" firstAttribute="top" secondItem="0Zi-dh-Its" secondAttribute="bottom" id="GWR-6g-7tn"/>
+                            <constraint firstItem="cT6-8H-aA4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GxX-TP-OnU"/>
+                            <constraint firstItem="aR6-Qv-zRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Juc-6j-2rj"/>
+                            <constraint firstItem="tan-TF-nxW" firstAttribute="top" secondItem="aR6-Qv-zRn" secondAttribute="bottom" constant="33" id="N0r-td-jMc"/>
+                            <constraint firstItem="0Zi-dh-Its" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OJP-4e-pGN"/>
+                            <constraint firstItem="cT6-8H-aA4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Usi-oX-b3R"/>
+                            <constraint firstItem="aR6-Qv-zRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WGl-uZ-slo"/>
+                            <constraint firstItem="0Zi-dh-Its" firstAttribute="top" secondItem="tan-TF-nxW" secondAttribute="bottom" constant="50" id="ZgW-Jf-JiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tan-TF-nxW" secondAttribute="trailing" constant="87" id="cOk-lY-6Gu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aR6-Qv-zRn" secondAttribute="trailing" constant="20" id="kix-W7-nJk"/>
+                            <constraint firstItem="0Zi-dh-Its" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wq1-vP-XTD"/>
+                            <constraint firstItem="cT6-8H-aA4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zmp-p1-2ai"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qry-z5-POp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="800.00000000000011" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eXF-Yc-j1k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1KE-nq-cwQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zz7-8E-Mar">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="guU-wK-fa0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zie-b7-NLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="126.5625"/>
         </scene>
     </scenes>
 </document>

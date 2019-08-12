@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OpeningIntroController.swift
 //  StarWarsWiki
 //
 //  Created by Ibraheem rawlinson on 8/12/19.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class OpeningIntroController: UIViewController {
+    // MARK: - Properties & Outlets
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    // MARK: - Methods & Actions
 }
-

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48AF04062301E2E400E4D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04052301E2E400E4D195 /* AppDelegate.swift */; };
-		48AF04082301E2E400E4D195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04072301E2E400E4D195 /* ViewController.swift */; };
+		48AF04082301E2E400E4D195 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04072301E2E400E4D195 /* HomeScreenController.swift */; };
 		48AF040B2301E2E400E4D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AF04092301E2E400E4D195 /* Main.storyboard */; };
 		48AF040D2301E2E600E4D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48AF040C2301E2E600E4D195 /* Assets.xcassets */; };
 		48AF04102301E2E600E4D195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48AF040E2301E2E600E4D195 /* LaunchScreen.storyboard */; };
@@ -22,12 +22,16 @@
 		48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042C2301EA1700E4D195 /* PlanetListModel.swift */; };
 		48AF04302301F16200E4D195 /* StarWarsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042F2301F16200E4D195 /* StarWarsApiClient.swift */; };
 		48AF04332301F25900E4D195 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04322301F25900E4D195 /* NetworkError.swift */; };
+		48AF04352301F43100E4D195 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04342301F43100E4D195 /* DetailController.swift */; };
+		48AF04372301F44E00E4D195 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04362301F44E00E4D195 /* ListController.swift */; };
+		48AF04392301F4A300E4D195 /* OpeningIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04382301F4A300E4D195 /* OpeningIntroController.swift */; };
+		48AF043B2301F74A00E4D195 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF043A2301F74A00E4D195 /* Episodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48AF04022301E2E400E4D195 /* StarWarsWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48AF04052301E2E400E4D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48AF04072301E2E400E4D195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48AF04072301E2E400E4D195 /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		48AF040A2301E2E400E4D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48AF040C2301E2E600E4D195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48AF040F2301E2E600E4D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +46,10 @@
 		48AF042C2301EA1700E4D195 /* PlanetListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListModel.swift; sourceTree = "<group>"; };
 		48AF042F2301F16200E4D195 /* StarWarsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApiClient.swift; sourceTree = "<group>"; };
 		48AF04322301F25900E4D195 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		48AF04342301F43100E4D195 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		48AF04362301F44E00E4D195 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		48AF04382301F4A300E4D195 /* OpeningIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningIntroController.swift; sourceTree = "<group>"; };
+		48AF043A2301F74A00E4D195 /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +110,10 @@
 		48AF04182301E83800E4D195 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
-				48AF04072301E2E400E4D195 /* ViewController.swift */,
+				48AF04072301E2E400E4D195 /* HomeScreenController.swift */,
+				48AF04342301F43100E4D195 /* DetailController.swift */,
+				48AF04362301F44E00E4D195 /* ListController.swift */,
+				48AF04382301F4A300E4D195 /* OpeningIntroController.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -113,6 +124,7 @@
 				48AF04282301E9E900E4D195 /* FilmListModel.swift */,
 				48AF042A2301EA0100E4D195 /* PeopleListModel.swift */,
 				48AF042C2301EA1700E4D195 /* PlanetListModel.swift */,
+				48AF043A2301F74A00E4D195 /* Episodes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,13 +253,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */,
+				48AF043B2301F74A00E4D195 /* Episodes.swift in Sources */,
 				48AF04232301E92000E4D195 /* UIImage+Gif.swift in Sources */,
 				48AF04302301F16200E4D195 /* StarWarsApiClient.swift in Sources */,
 				48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */,
-				48AF04082301E2E400E4D195 /* ViewController.swift in Sources */,
+				48AF04082301E2E400E4D195 /* HomeScreenController.swift in Sources */,
 				48AF04272301E9A000E4D195 /* ButtonView.swift in Sources */,
 				48AF04332301F25900E4D195 /* NetworkError.swift in Sources */,
+				48AF04392301F4A300E4D195 /* OpeningIntroController.swift in Sources */,
 				48AF04062301E2E400E4D195 /* AppDelegate.swift in Sources */,
+				48AF04352301F43100E4D195 /* DetailController.swift in Sources */,
+				48AF04372301F44E00E4D195 /* ListController.swift in Sources */,
 				48AF04292301E9E900E4D195 /* FilmListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,21 +1,29 @@
-//
-//  ButtonView.swift
-//  StarWarsWiki
-//
-//  Created by Ibraheem rawlinson on 8/12/19.
-//  Copyright © 2019 Ibraheem rawlinson. All rights reserved.
-//
-
 import UIKit
 
 class ButtonView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var planetsBttn: UIButton!
+    @IBOutlet weak var readMoreBttn: UIButton!
 
+    @IBOutlet weak var peopleBttn: UIButton!
+
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        commonInit()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        // load the nib file
+        Bundle.main.loadNibNamed("ButtonView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
 }
+
