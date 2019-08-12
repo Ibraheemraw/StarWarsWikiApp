@@ -26,21 +26,12 @@ class OpeningIntroController: UIViewController {
     // MARK: - Methods & Actions
     private func callMethods(){
         setupTextView()
-        setIntroDelegate()
+        
     }
-    private func setIntroDelegate(){
-        let homeScreenVC = storyboard?.instantiateViewController(withIdentifier: "HomeScreenController") as! HomeScreenController
-        homeScreenVC.delegate = self
-    }
+    
     private func setupTextView(){
         textView.text = intro
         print("\(intro)")
         // TODO: make sure the text view is non selected able
-    }
-}
-
-extension OpeningIntroController: HomeScreenControllerDelegate {
-    func setOpeningIntroText(openingText text: String) {
-        textView.text = text
     }
 }

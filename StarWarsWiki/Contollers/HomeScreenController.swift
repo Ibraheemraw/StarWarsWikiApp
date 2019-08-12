@@ -94,15 +94,16 @@ class HomeScreenController: UIViewController {
     }
 
     @objc private func presentOpeningIntro(){
-        let row = pickerView.selectedRow(inComponent: 0)
-        let text = films[row].openingIntro
-        delegate?.setOpeningIntroText(openingText: text)
+       let row = pickerView.selectedRow(inComponent: 0)
+       let text = films[row].openingIntro
+//        delegate?.setOpeningIntroText(openingText: text)
         let storyboardID = "OpeningIntroController"
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let openingIntroController = storyBoard.instantiateViewController(withIdentifier: storyboardID) as? OpeningIntroController else {
             print("issue with ID")
             return
         }
+        openingIntroController.intro = text
         self.navigationController?.pushViewController(openingIntroController, animated: true)
     }
 
