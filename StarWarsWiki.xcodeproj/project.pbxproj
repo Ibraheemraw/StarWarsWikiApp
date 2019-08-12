@@ -20,6 +20,8 @@
 		48AF04292301E9E900E4D195 /* FilmListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04282301E9E900E4D195 /* FilmListModel.swift */; };
 		48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042A2301EA0100E4D195 /* PeopleListModel.swift */; };
 		48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042C2301EA1700E4D195 /* PlanetListModel.swift */; };
+		48AF04302301F16200E4D195 /* StarWarsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF042F2301F16200E4D195 /* StarWarsApiClient.swift */; };
+		48AF04332301F25900E4D195 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF04322301F25900E4D195 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		48AF04282301E9E900E4D195 /* FilmListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListModel.swift; sourceTree = "<group>"; };
 		48AF042A2301EA0100E4D195 /* PeopleListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListModel.swift; sourceTree = "<group>"; };
 		48AF042C2301EA1700E4D195 /* PlanetListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListModel.swift; sourceTree = "<group>"; };
+		48AF042F2301F16200E4D195 /* StarWarsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApiClient.swift; sourceTree = "<group>"; };
+		48AF04322301F25900E4D195 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		48AF04042301E2E400E4D195 /* StarWarsWiki */ = {
 			isa = PBXGroup;
 			children = (
+				48AF04312301F23200E4D195 /* AppError */,
+				48AF042E2301F13100E4D195 /* Clients */,
 				48AF041D2301E89A00E4D195 /* Gif */,
 				48AF041C2301E86E00E4D195 /* Extensions */,
 				48AF041B2301E86200E4D195 /* Fonts */,
@@ -142,6 +148,22 @@
 				48AF04202301E8F200E4D195 /* bb8_dribbble.gif */,
 			);
 			path = Gif;
+			sourceTree = "<group>";
+		};
+		48AF042E2301F13100E4D195 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				48AF042F2301F16200E4D195 /* StarWarsApiClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		48AF04312301F23200E4D195 /* AppError */ = {
+			isa = PBXGroup;
+			children = (
+				48AF04322301F25900E4D195 /* NetworkError.swift */,
+			);
+			path = AppError;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +242,11 @@
 			files = (
 				48AF042B2301EA0100E4D195 /* PeopleListModel.swift in Sources */,
 				48AF04232301E92000E4D195 /* UIImage+Gif.swift in Sources */,
+				48AF04302301F16200E4D195 /* StarWarsApiClient.swift in Sources */,
 				48AF042D2301EA1700E4D195 /* PlanetListModel.swift in Sources */,
 				48AF04082301E2E400E4D195 /* ViewController.swift in Sources */,
 				48AF04272301E9A000E4D195 /* ButtonView.swift in Sources */,
+				48AF04332301F25900E4D195 /* NetworkError.swift in Sources */,
 				48AF04062301E2E400E4D195 /* AppDelegate.swift in Sources */,
 				48AF04292301E9E900E4D195 /* FilmListModel.swift in Sources */,
 			);
