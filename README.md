@@ -7,6 +7,11 @@ A Star Wars Wikipedia App that allows users to learn more about people, planets,
 This project was created to test myskills on making network calls and understadning how to pass data through from one view controller to the next. Also being able to set up infinite scroll.
 
 
+## Walkthrough 
+* Homescreeen 
+* Intro View
+* List View
+* Detail View
 
 ## Authors
 
