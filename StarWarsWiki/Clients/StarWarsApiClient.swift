@@ -54,7 +54,30 @@ struct StarWarsApiClient {
         }
         task.resume()
     }
-    
+
+    static public func fetchPeoplePerMovie(endPointUrl endpoint: String, callBack:@escaping( Result<[Film],NetworkError>)->Void){
+        guard let url = URL(string: endpoint) else {
+        callBack(.failure(.badURl))
+        return
+        }
+        request = URLRequest(url: url)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let film = try JSONDecoder().decode(StarWarsFilmList.self, from: data)
+                    callBack(.success(film.swFilms))
+                } catch {
+                    callBack(.failure(.jsonDecodeError(error)))
+                }
+            }
+            if let error = error {
+                callBack(.failure(.apiError(error)))
+            }
+        }
+        task.resume()
+        
+    }
+
     static public func fetchPlanets(callBack:@escaping( Result<[Planet],NetworkError>)->Void){
         guard let url = URL(string: planetEndPoint) else {
             callBack(.failure(.badURl))

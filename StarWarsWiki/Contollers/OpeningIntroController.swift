@@ -26,9 +26,7 @@ class OpeningIntroController: UIViewController {
     // MARK: - Methods & Actions
     private func callMethods(){
         setupTextView()
-        
     }
-    
     private func setupTextView(){
         textView.text = intro
         print("\(intro)")

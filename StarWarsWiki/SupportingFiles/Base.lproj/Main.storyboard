@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--List Controller-->
         <scene sceneID="oAE-kE-2iN">
             <objects>
-                <viewController id="40P-Ww-7d5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListController" id="40P-Ww-7d5" customClass="ListController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5ZJ-KW-inJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,6 +96,9 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="40P-Ww-7d5" eventType="touchUpInside" id="puQ-zr-n9H"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uxf-IV-wvP">
                                 <rect key="frame" x="0.0" y="94" width="414" height="56"/>
@@ -138,6 +141,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FKg-ap-ouj"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="uxf-IV-wvP" id="Mp5-ba-kSe"/>
+                        <outlet property="tableView" destination="pHC-Qb-bQK" id="KJ8-fr-MvZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtw-Qp-hWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

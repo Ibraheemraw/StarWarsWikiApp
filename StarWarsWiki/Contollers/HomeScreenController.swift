@@ -81,6 +81,8 @@ class HomeScreenController: UIViewController {
     }
 
     private func showListController(){
+        let listController = storyboard?.instantiateViewController(withIdentifier: "ListController") as! ListController
+        self.present(listController, animated: true, completion: nil)
     }
 
     private func setButtonTargets(){
