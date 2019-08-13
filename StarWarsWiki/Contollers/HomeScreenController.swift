@@ -25,6 +25,11 @@ class HomeScreenController: UIViewController {
         super.viewDidLoad()
         callMethods()
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        presentPlanetList()
+        presentPeopleList()
+    }
 
 
     private func callMethods(){
@@ -94,6 +99,9 @@ class HomeScreenController: UIViewController {
     }
 
     @objc private func presentPlanetList(){
+        if buttonSelected == .peopleBttn {
+           buttonSelected = .planetBttn
+        }
         buttonSelected = .planetBttn
         showListController()
     }
@@ -113,8 +121,12 @@ class HomeScreenController: UIViewController {
 
 
     @objc private func presentPeopleList(){
+        if buttonSelected == .planetBttn {
+            buttonSelected = .peopleBttn
+        }
         buttonSelected = .peopleBttn
-       showListController()
+        showListController()
+       
     }
 
     private func setBttnState(buttonState state: Bool){
