@@ -1,9 +1,5 @@
 import UIKit
 
-protocol HomeScreenControllerDelegate: AnyObject {
-    func setOpeningIntroText(openingText text: String)
-}
-
 class HomeScreenController: UIViewController {
     // MARK: - Properties & Outlets
     @IBOutlet weak var pickerView: UIPickerView!
@@ -17,7 +13,7 @@ class HomeScreenController: UIViewController {
     }
     private var episodeTitle = String()
     @IBOutlet weak var buttonView: ButtonView!
-    var delegate: HomeScreenControllerDelegate!
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -120,7 +120,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <segue destination="8IY-Rv-ABa" kind="showDetail" id="qkp-ob-fwv"/>
+                                            <segue destination="8IY-Rv-ABa" kind="showDetail" identifier="show detail info" id="qkp-ob-fwv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="800.00000000000011" y="864.50892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Controller-->
         <scene sceneID="hbo-7f-XN8">
             <objects>
-                <viewController id="8IY-Rv-ABa" sceneMemberID="viewController">
+                <viewController id="8IY-Rv-ABa" customClass="DetailController" customModule="StarWarsWiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSe-aj-95s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,9 +195,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmz-eo-Fbo">
+                                <rect key="frame" x="20" y="795" width="374" height="67"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="34"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="8IY-Rv-ABa" eventType="touchUpInside" id="IDx-3q-fFS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Jmz-eo-Fbo" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="18a-Lo-XdB"/>
                             <constraint firstItem="WfL-Hi-CbR" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="3lI-30-gs9"/>
                             <constraint firstItem="UP6-QL-wvb" firstAttribute="top" secondItem="MMg-pD-zpn" secondAttribute="bottom" constant="22" id="8dG-S6-OYq"/>
                             <constraint firstItem="UP6-QL-wvb" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="8pH-cV-EvJ"/>
@@ -205,6 +216,7 @@
                             <constraint firstItem="aVS-4d-k65" firstAttribute="top" secondItem="ir5-qA-fD3" secondAttribute="top" id="Fj2-Ti-hC4"/>
                             <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="aVS-4d-k65" secondAttribute="trailing" constant="20" id="HWp-7d-EhS"/>
                             <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="MMg-pD-zpn" secondAttribute="trailing" constant="20" id="IsZ-Vf-dTn"/>
+                            <constraint firstItem="Jmz-eo-Fbo" firstAttribute="bottom" secondItem="ir5-qA-fD3" secondAttribute="bottom" id="M0x-xs-c5a"/>
                             <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="3A5-8b-Jyg" secondAttribute="trailing" constant="82" id="PIL-Rr-8cM"/>
                             <constraint firstItem="3A5-8b-Jyg" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="82" id="Pgc-9c-OgT"/>
                             <constraint firstItem="MMg-pD-zpn" firstAttribute="top" secondItem="3A5-8b-Jyg" secondAttribute="bottom" constant="46" id="RQY-kN-Mwt"/>
@@ -214,11 +226,19 @@
                             <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="WfL-Hi-CbR" secondAttribute="trailing" constant="20" id="pu6-V6-PQf"/>
                             <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="UP6-QL-wvb" secondAttribute="trailing" constant="20" id="sRK-Sc-Ora"/>
                             <constraint firstItem="SQB-Wg-Uyt" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="tmD-PJ-ZT3"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="Jmz-eo-Fbo" secondAttribute="trailing" constant="20" id="uFl-zo-pWD"/>
                             <constraint firstItem="MMg-pD-zpn" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="ybI-EV-3Wx"/>
                             <constraint firstItem="SQB-Wg-Uyt" firstAttribute="top" secondItem="UP6-QL-wvb" secondAttribute="bottom" constant="22" id="ydb-3L-zV1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ir5-qA-fD3"/>
                     </view>
+                    <connections>
+                        <outlet property="firstLabel" destination="MMg-pD-zpn" id="a0E-it-x6K"/>
+                        <outlet property="forthLabel" destination="WfL-Hi-CbR" id="3KW-fO-W46"/>
+                        <outlet property="nameLabel" destination="aVS-4d-k65" id="F4g-i5-X7F"/>
+                        <outlet property="secondLabel" destination="UP6-QL-wvb" id="7zp-MZ-SKY"/>
+                        <outlet property="thirdLabel" destination="SQB-Wg-Uyt" id="w6t-RB-N6M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7q9-uj-vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

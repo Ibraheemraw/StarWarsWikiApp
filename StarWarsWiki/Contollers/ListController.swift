@@ -45,18 +45,17 @@ class ListController: UIViewController {
         allCharacters.shuffle()
         tableView.reloadData()
     }
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "show detail info"{
-    //            if let destination = segue.destination as? DetailController {
-    //                if let cellIndex = tableView.indexPathForSelectedRow?.row {
-    //                    let person = allCharacters[cellIndex]
-    //
-    //                }
-    //            }
-    //        } else {
-    //            print("Wrong ID")
-    //        }
-    //    }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "show detail info"{
+                if let destination = segue.destination as? DetailController {
+                    if let cellIndex = tableView.indexPathForSelectedRow?.row {let person = allCharacters[cellIndex]
+                        destination.person = person
+                    }
+                }
+            } else {
+                print("Wrong ID")
+            }
+      }
 
     private func callMethods(){
         setupDelegations()
