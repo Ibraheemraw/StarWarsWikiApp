@@ -157,13 +157,72 @@
                     <view key="view" contentMode="scaleToFill" id="qSe-aj-95s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVS-4d-k65">
+                                <rect key="frame" x="20" y="44" width="374" height="59.5"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swlogo" translatesAutoresizingMaskIntoConstraints="NO" id="3A5-8b-Jyg">
+                                <rect key="frame" x="82" y="137.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="T1p-qo-oa9"/>
+                                    <constraint firstAttribute="height" constant="250" id="wB3-gt-BLM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-pD-zpn">
+                                <rect key="frame" x="20" y="433.5" width="374" height="37"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP6-QL-wvb">
+                                <rect key="frame" x="20" y="492.5" width="374" height="37"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-Wg-Uyt">
+                                <rect key="frame" x="20" y="551.5" width="374" height="37"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfL-Hi-CbR">
+                                <rect key="frame" x="20" y="610.5" width="374" height="37"/>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WfL-Hi-CbR" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="3lI-30-gs9"/>
+                            <constraint firstItem="UP6-QL-wvb" firstAttribute="top" secondItem="MMg-pD-zpn" secondAttribute="bottom" constant="22" id="8dG-S6-OYq"/>
+                            <constraint firstItem="UP6-QL-wvb" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="8pH-cV-EvJ"/>
+                            <constraint firstItem="aVS-4d-k65" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="Dhw-vo-AmT"/>
+                            <constraint firstItem="aVS-4d-k65" firstAttribute="top" secondItem="ir5-qA-fD3" secondAttribute="top" id="Fj2-Ti-hC4"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="aVS-4d-k65" secondAttribute="trailing" constant="20" id="HWp-7d-EhS"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="MMg-pD-zpn" secondAttribute="trailing" constant="20" id="IsZ-Vf-dTn"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="3A5-8b-Jyg" secondAttribute="trailing" constant="82" id="PIL-Rr-8cM"/>
+                            <constraint firstItem="3A5-8b-Jyg" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="82" id="Pgc-9c-OgT"/>
+                            <constraint firstItem="MMg-pD-zpn" firstAttribute="top" secondItem="3A5-8b-Jyg" secondAttribute="bottom" constant="46" id="RQY-kN-Mwt"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="SQB-Wg-Uyt" secondAttribute="trailing" constant="20" id="XzV-bn-jz2"/>
+                            <constraint firstItem="WfL-Hi-CbR" firstAttribute="top" secondItem="SQB-Wg-Uyt" secondAttribute="bottom" constant="22" id="md6-Rw-eG4"/>
+                            <constraint firstItem="3A5-8b-Jyg" firstAttribute="top" secondItem="aVS-4d-k65" secondAttribute="bottom" constant="34" id="pK9-Bg-Ktr"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="WfL-Hi-CbR" secondAttribute="trailing" constant="20" id="pu6-V6-PQf"/>
+                            <constraint firstItem="ir5-qA-fD3" firstAttribute="trailing" secondItem="UP6-QL-wvb" secondAttribute="trailing" constant="20" id="sRK-Sc-Ora"/>
+                            <constraint firstItem="SQB-Wg-Uyt" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="tmD-PJ-ZT3"/>
+                            <constraint firstItem="MMg-pD-zpn" firstAttribute="leading" secondItem="ir5-qA-fD3" secondAttribute="leading" constant="20" id="ybI-EV-3Wx"/>
+                            <constraint firstItem="SQB-Wg-Uyt" firstAttribute="top" secondItem="UP6-QL-wvb" secondAttribute="bottom" constant="22" id="ydb-3L-zV1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ir5-qA-fD3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7q9-uj-vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="865"/>
+            <point key="canvasLocation" x="1860.8695652173915" y="864.50892857142856"/>
         </scene>
         <!--Opening Intro Controller-->
         <scene sceneID="ovm-Ro-gji">
