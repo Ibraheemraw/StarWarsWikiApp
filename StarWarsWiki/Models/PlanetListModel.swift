@@ -2,7 +2,7 @@ import Foundation
 
 //MARK: - Planet List Model
 struct StarWarsPlanetList: Codable {
-    let count: Int
+    let count: Int?
     let previous: String?
     let next: String?
     let planets: [Planet]

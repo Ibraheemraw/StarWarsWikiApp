@@ -2,7 +2,7 @@ import Foundation
 
 //MARK: - People List Model
 struct StarWarsPeopleList: Codable {
-    let count: Int
+    let count: Int?
     let previous: String?
     let next: String?
     let people: [Person]

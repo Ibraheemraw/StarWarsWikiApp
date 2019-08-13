@@ -2,7 +2,7 @@ import Foundation
 
 //MARK: - Film List Model
 struct StarWarsFilmList: Codable {
-    let count: Int
+    let count: Int?
     let previous: String?
     let next: String?
     let swFilms: [Film]

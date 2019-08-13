@@ -3,8 +3,6 @@ import Foundation
 struct StarWarsApiClient {
     //MARK: - Properties
     static private let filmEndPoint = "https://swapi.co/api/films/"
-    static private let peopleEndPoint = "https://swapi.co/api/people/"
-    static private let planetEndPoint = "https://swapi.co/api/planets/"
     static private var request: URLRequest!
     static private let session = URLSession.shared
     private init(){}
@@ -32,7 +30,8 @@ struct StarWarsApiClient {
         task.resume()
     }
     
-    static public func fetchPeople(callBack:@escaping( Result<[Person],NetworkError>)->Void){
+    static public func fetchPeople(pageNumber page: Int, callBack:@escaping( Result<[Person],NetworkError>)->Void){
+        let peopleEndPoint = "https://swapi.co/api/people/?page=\(page)"
         guard let url = URL(string: peopleEndPoint) else {
             callBack(.failure(.badURl))
             return
@@ -55,30 +54,10 @@ struct StarWarsApiClient {
         task.resume()
     }
 
-    static public func fetchPeoplePerMovie(endPointUrl endpoint: String, callBack:@escaping( Result<[Film],NetworkError>)->Void){
-        guard let url = URL(string: endpoint) else {
-        callBack(.failure(.badURl))
-        return
-        }
-        request = URLRequest(url: url)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let data = data {
-                do {
-                    let film = try JSONDecoder().decode(StarWarsFilmList.self, from: data)
-                    callBack(.success(film.swFilms))
-                } catch {
-                    callBack(.failure(.jsonDecodeError(error)))
-                }
-            }
-            if let error = error {
-                callBack(.failure(.apiError(error)))
-            }
-        }
-        task.resume()
-        
-    }
+    
 
-    static public func fetchPlanets(callBack:@escaping( Result<[Planet],NetworkError>)->Void){
+    static public func fetchPlanets(pageNumber page: Int, callBack:@escaping( Result<[Planet],NetworkError>)->Void){
+        let planetEndPoint = "https://swapi.co/api/planets/?page=\(page)"
         guard let url = URL(string: planetEndPoint) else {
             callBack(.failure(.badURl))
             return
