@@ -1,5 +1,10 @@
 import UIKit
 
+enum ButtonSelected {
+    case peopleBttn
+    case planetBttn
+}
+
 class HomeScreenController: UIViewController {
     // MARK: - Properties & Outlets
     @IBOutlet weak var pickerView: UIPickerView!
@@ -13,6 +18,7 @@ class HomeScreenController: UIViewController {
     }
     private var episodeTitle = String()
     @IBOutlet weak var buttonView: ButtonView!
+    public var buttonSelected = ButtonSelected.peopleBttn
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -88,13 +94,13 @@ class HomeScreenController: UIViewController {
     }
 
     @objc private func presentPlanetList(){
+        buttonSelected = .planetBttn
         showListController()
     }
 
     @objc private func presentOpeningIntro(){
        let row = pickerView.selectedRow(inComponent: 0)
        let text = films[row].openingIntro
-//        delegate?.setOpeningIntroText(openingText: text)
         let storyboardID = "OpeningIntroController"
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let openingIntroController = storyBoard.instantiateViewController(withIdentifier: storyboardID) as? OpeningIntroController else {
@@ -107,6 +113,7 @@ class HomeScreenController: UIViewController {
 
 
     @objc private func presentPeopleList(){
+        buttonSelected = .peopleBttn
        showListController()
     }
 

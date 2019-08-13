@@ -8,6 +8,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var thirdLabel: UILabel!
     @IBOutlet weak var forthLabel: UILabel!
     public var person: Person!
+    public var planet: Planet!
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
