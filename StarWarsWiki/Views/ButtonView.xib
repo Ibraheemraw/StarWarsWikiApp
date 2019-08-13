@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonView" customModule="StarWarsWiki" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="JVd-2g-tfg"/>
+                <outlet property="peopleBttn" destination="Cbp-dy-xNH" id="o7s-yg-ppH"/>
+                <outlet property="planetsBttn" destination="lXw-6A-yGU" id="cdo-nf-WA5"/>
+                <outlet property="readMoreBttn" destination="oKw-3n-GV7" id="TIN-R5-Kg1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXw-6A-yGU">
+                    <rect key="frame" x="1" y="17" width="116" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="116" id="6Ih-LL-I6K"/>
+                        <constraint firstAttribute="height" constant="33" id="oxi-dy-AYY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="21"/>
+                    <state key="normal" title="Planets">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbp-dy-xNH">
+                    <rect key="frame" x="313" y="10" width="90" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="0zI-Dn-Fwf"/>
+                        <constraint firstAttribute="height" constant="33" id="Ibn-Zh-1Nn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="21"/>
+                    <state key="normal" title="People">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKw-3n-GV7">
+                    <rect key="frame" x="139" y="14" width="137" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="fcq-EO-7nr"/>
+                        <constraint firstAttribute="width" constant="137" id="lzb-0L-cbc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="21"/>
+                    <state key="normal" title="Read More">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lXw-6A-yGU" secondAttribute="bottom" constant="10" id="CLQ-eD-Dx2"/>
+                <constraint firstItem="Cbp-dy-xNH" firstAttribute="leading" secondItem="oKw-3n-GV7" secondAttribute="trailing" constant="37" id="NI1-FB-WWL"/>
+                <constraint firstItem="Cbp-dy-xNH" firstAttribute="firstBaseline" secondItem="oKw-3n-GV7" secondAttribute="baseline" id="NhL-xH-EUa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Cbp-dy-xNH" secondAttribute="bottom" constant="4" id="Qgr-P0-pAH"/>
+                <constraint firstItem="lXw-6A-yGU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="1" id="YTx-5L-WN4"/>
+                <constraint firstItem="Cbp-dy-xNH" firstAttribute="baseline" secondItem="lXw-6A-yGU" secondAttribute="baseline" id="j3B-9j-sdM"/>
+                <constraint firstItem="Cbp-dy-xNH" firstAttribute="baseline" secondItem="oKw-3n-GV7" secondAttribute="baseline" id="vGN-mz-eZA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cbp-dy-xNH" secondAttribute="trailing" constant="11" id="vRC-NR-gCW"/>
+                <constraint firstItem="Cbp-dy-xNH" firstAttribute="baseline" secondItem="lXw-6A-yGU" secondAttribute="firstBaseline" id="xfM-hb-jHi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-255.07246376811597" y="93.75"/>
+        </view>
+    </objects>
+</document>

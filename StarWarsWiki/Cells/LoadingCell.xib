@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uIX-Ha-X5U" customClass="LoadingCell" customModule="StarWarsWiki" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uIX-Ha-X5U" id="9Xw-10-pgI">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FID-Yr-KTq">
+                        <rect key="frame" x="197" y="11" width="20" height="20"/>
+                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="FID-Yr-KTq" firstAttribute="leading" secondItem="9Xw-10-pgI" secondAttribute="leading" constant="197" id="01R-n7-C6B"/>
+                    <constraint firstItem="FID-Yr-KTq" firstAttribute="top" secondItem="9Xw-10-pgI" secondAttribute="top" constant="11" id="HHT-5H-9rh"/>
+                    <constraint firstAttribute="bottom" secondItem="FID-Yr-KTq" secondAttribute="bottom" constant="12.5" id="had-7B-857"/>
+                    <constraint firstAttribute="trailing" secondItem="FID-Yr-KTq" secondAttribute="trailing" constant="197" id="pIw-I3-Znc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="spinner" destination="FID-Yr-KTq" id="z1V-oz-4nS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
